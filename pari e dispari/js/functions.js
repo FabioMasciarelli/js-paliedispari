@@ -14,16 +14,15 @@ function rndNumber () {
 
 /**
  * Description placeholder funzione per definire un numero pari o dispari
- *
+ * @param {number} num1  
+ * @param {number} num2 
  * @returns {boolean}
  */
 function typeOfNumber (num1, num2) {
-    let flag;
+    let flag = false;
     const sum = num1 + num2;
-    if (sum  % 2 === 0) {
+    if (sum % 2 === 0) {
         flag = true;
-    } else {
-        flag = false;
     }
 
     return flag;

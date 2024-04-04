@@ -5,13 +5,11 @@
  */
 function checkWord (word) {
     const normalWord = word;
-    // const splitWord = word.split;
-    // console.log(splitWord);
-    const reverseWord = normalWord.reverse;
+    const reverseWord = normalWord.split('').reverse().join('');
 
     if (normalWord == reverseWord) {
-        console.log("la parola è palindroma");
+        return true;
     } else {
-        console.log("la parola non è palindroma");
+        return false;
     }
 }

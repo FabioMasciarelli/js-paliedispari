@@ -1,19 +1,22 @@
-const userNumber = document.getElementById(user-number);
+const userNumber = document.getElementById("user-number");
 
-const userChoice = document.getElementById(user-choice);
-console.log(userChoice);
+const inputBtn = document.getElementById("button");
 
-let computerNumber = 0;
+inputBtn.addEventListener("click", function () {
+    const userChoice = document.getElementById("user-choice").value;
+    console.log(userChoice);
 
-rndNumber();
-console.log(rndNumber);
+    let computerNumber = rndNumber();
+    console.log(computerNumber);
 
-computerNumber = rndNumber;
+    const num = typeOfNumber(userNumber, computerNumber);
+    console.log(num);
 
-if (computerNumber + userNumber % 2 === 0) {
-    if (userChoice ===  "pari") {
-        console.log("Hai vinto");
+    if (num === true && userChoice === "pari") {
+        console.log("hai vinto!");
+    } else if (num === false && userChoice === "dispari") {
+        console.log("hai vinto!");
     } else {
-        
+        console.log("hai perso!");
     }
-}
+});

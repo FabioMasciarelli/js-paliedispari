@@ -3,8 +3,8 @@
  *
  * @returns {number}
  */
-function rndNumber () {
-    const rdnValue = parseInt(Math.floor(Math.random() * 5) + 1);
+function rndNumber (max, min) {
+    const rdnValue = Math.floor(Math.random() * (max - min + 1 ) + 1 );
     return rdnValue;
 };
 
@@ -14,14 +14,13 @@ function rndNumber () {
 
 /**
  * Description placeholder funzione per definire un numero pari o dispari
- * @param {number} num1  
- * @param {number} num2 
+ * @param {number} number
  * @returns {boolean}
  */
-function typeOfNumber (num1, num2) {
+function typeOfNumber (number) {
     let flag = false;
-    const sum = num1 + num2;
-    if (sum % 2 === 0) {
+
+    if (number % 2 === 0) {
         flag = true;
     }
 
